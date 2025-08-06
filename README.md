@@ -107,19 +107,3 @@ Metrics used:
 - Improve character consistency and facial rendering
 
 ---
-
-## 🚀 Getting Started
-
-### 🧪 Run Inference with Fine-Tuned Model
-
-```bash
-# Example using diffusers
-from diffusers import StableDiffusionPipeline
-import torch
-
-pipe = StableDiffusionPipeline.from_pretrained("path/to/your/fine-tuned-model", torch_dtype=torch.float16)
-pipe.to("cuda")
-
-prompt = "A young princess with a golden crown walking in an enchanted forest."
-image = pipe(prompt).images[0]
-image.save("princess_forest.png")
